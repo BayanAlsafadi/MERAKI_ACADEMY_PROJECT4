@@ -1,9 +1,6 @@
 const bcrypt = require("bcrypt");
-
 const jwt = require("jsonwebtoken");
-
 const { User } = require("./../../../db/models/user");
-
 const login = (req, res) => {
   const { email, password } = req.body;
   User.findOne({ email: email.toLowerCase() })
